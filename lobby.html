@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Room</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/lobby.css'>
+
+</head>
+<body>
+
+    <header id="nav">
+        <div class="nav_list">
+            <a href="lobby.html">
+            <h3 id="logo">
+                <span>DISCORD</span>
+            </h3>
+            </a>
+        </div>
+
+
+        <div id="nav_links">
+            <a class="nav_link" href="/">
+                Lobby
+            </a>
+        </div>
+    </header>
+
+    <main id="room__lobby__container">
+        <div id="form__container">
+            <div id="form__container__header">
+                <p>Create or Join Room</p>
+            </div>
+            <form id="lobby__form">
+                <div class="inputBox">
+                    
+                    <input type="text" name="name" required />
+                    <label for="name">Display Name</label>
+                </div>
+                <div class="inputBox">
+                    
+                    <input type="text" name="room" required />
+                    <label for="room">Room Name</label>
+                </div>
+                <div class="inputBox">
+                    <button type="submit">Go to Room</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+</body>
+<script type="text/javascript" src="js/lobby.js"></script>
+</html>
