@@ -21,8 +21,26 @@ if (!roomId) {
 let localTracks = []
 let remoteUser = {}
 
+let rtmClient;
+let channel;
+
 
 let JoinRoomInit = async () => {
+    rtmClient = await AgoraRTM.createInstance(APP_ID)
+    await rtmClient.login({uid, token})
+
+
+    channel = await rtmClient.createChannel(roomId)
+    await channel.join()
+
+    channel.on('MemberJoined', handleMemberJoined)
+    channel.on('MemberLeft', handleMemberLeft)
+
+    getMembers();
+
+
+
+
     client = AgoraRTC.createClient({ mode: 'rtc', codec: 'vp8' });
     await client.join(APP_ID, roomId, token, uid);
 
